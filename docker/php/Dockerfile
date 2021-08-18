@@ -50,7 +50,7 @@ COPY . /var/www
 COPY --chown=www:www . /var/www
 
 #Composer update for /vendor/autoload.php
-# RUN composer update --no-scripts
+RUN composer update
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
