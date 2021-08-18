@@ -16,6 +16,7 @@ class HelloController extends AbstractController {
      */
     public function hello(MessageGenerator $messageGenerator)
     {
-        return new Response($messageGenerator->helloMessage());
+        $session = $this->container->get('session');
+        return new Response($messageGenerator->helloMessage() . ' ------ ' . $session->getName());
     }
 }
