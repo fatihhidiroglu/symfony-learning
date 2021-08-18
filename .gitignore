@@ -20,4 +20,3 @@
 ###< phpunit/phpunit ###
 
 /.idea/
-/docker/mysql/persisted-volume/*
