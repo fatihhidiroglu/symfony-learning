@@ -1,0 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+    {{ path('post_listele_yeni', {"page": 25}) }}
+{% endblock %}
