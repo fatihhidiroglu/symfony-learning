@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class TemplateController extends AbstractController {
     /**
-     * @Route('/template', name='index')
+     * @Route("/template", name="template_index")
      * @return Response
      */
 

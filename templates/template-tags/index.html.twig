@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    Hello test blog
+    {% include "template-tags/include-me.html.twig" %}
+    <hr>
+{% endblock %}
+
+{% block name %}
+    TSFRaiders
+    <hr>
+{% endblock %}
+
+{% block for_test %}
+    {% for sehir in sehirler %}
+        {{ sehir }}<br>
+    {% endfor %}
+    <hr>
+{% endblock %}
+
+{% block if_test %}
+    {% if ifVar %}
+        True
+    {% else %}
+        false
+    {% endif %}
+
+    <br>
+    {% if definedCheck is defined %}
+        definedCheck: defined
+    {% else %}
+        definedCheck: not Defined
+    {% endif %}
+
+    <br>
+    {% if emptyCheck is empty %}
+        emptyCheck: empty
+    {% else %}
+        emptyCheck: not empty
+    {% endif %}
+
+    <br>
+    {% if nullCheck is null %}
+        nullCheck: null
+    {% else %}
+        nullCheck: not null
+    {% endif %}
+
+    <br>
+    {% if 10 is even %}
+        çift
+    {% else %}
+        tek
+    {% endif %}
+
+    <br>
+    {% if iterableCheck is iterable %}
+        iterableCheck: iterable
+    {% else %}
+        iterableCheck: not iterable
+    {% endif %}
+    <hr>
+{% endblock %}
+
+{% block set_test %}
+    {% set isim = "Fatih" %}
+    {{ isim }}
+
+    <br>
+    {% apply spaceless %}
+        <div>
+            <h2>
+                <b>İsim</b>
+            </h2>
+        </div>
+    {% endapply %}
+    <hr>
+{% endblock %}
