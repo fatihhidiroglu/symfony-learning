@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
 
 class IndexController extends AbstractController
@@ -60,5 +61,14 @@ class IndexController extends AbstractController
         return $this->redirectToRoute('request_test');
     }
 
+    /**
+     * @Route("/service", name="servis_test")
+     * @param SessionInterface $session
+     * @return Response
+     */
+
+    public function serviceTest(SessionInterface $session) {
+        return new Response($session->getName());
+    }
 
 }
