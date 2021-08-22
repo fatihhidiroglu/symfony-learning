@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AssetController!{% endblock %}
+
+{% block body %}
+ Asset Template İçeriği
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/custom.js') }}"></script>
+{% endblock %}
