@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {# abs #}
+    {{ negativeVar|abs }}
+    <hr>
+
+    {# capitalize #}
+    {{ sentence|capitalize }}
+    <hr>
+
+    {# date #}
+    {{ today|date('M D Y') }}
+    <hr>
+
+    {# first #}
+    {{ sehirler|first }}
+    <hr>
+
+    {# join #}
+    {{ sehirler|join(',') }}
+    <hr>
+
+    {# keys #}
+    {{ sehirler|keys|join('--') }}
+    <hr>
+
+    {# last #}
+    {{ sehirler|last }}
+    <hr>
+
+    {# length #}
+    {{ sehirler|length }}
+    <hr>
+
+    {# lower #}
+    {{ sentence|lower }}
+    <hr>
+
+    {# merger #}
+    {{ sehirler|merge(['Kayseri','Muğla'])|join(',') }}
+    <hr>
+
+    {# raw #}
+    {{ rawData|raw }}
+    <hr>
+
+    {# reverse #}
+    {{ sehirler|reverse|join('--') }}
+    <hr>
+
+    {# sort #}
+    {{ sehirler|sort|join('--') }}
+    <hr>
+
+    {# trim #}
+    {{ sentence|trim }}
+    <hr>
+
+    {# upper #}
+    {{ sentence|upper }}
+    <hr>
+
+    {# urlencode #}
+    {{ 'http://fatihhidiroglu.com/?name=fatih'|url_encode }}
+    <hr>
+
+    {# jsonencode #}
+    {{ sehirler|json_encode }}
+    <hr>
+
+{% endblock %}
