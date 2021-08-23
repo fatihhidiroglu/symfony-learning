@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Urun;
 use App\Service\MessageGenerator;
 use App\Service\NameGenerator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
