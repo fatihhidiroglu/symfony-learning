@@ -5,3 +5,7 @@ controllers:
 kernel:
     resource: ../../src/Kernel.php
     type: annotation
+
+test-bundle-controller:
+    resource: ../../src/TSF/TestBundle/Controller/
+    type: annotation
