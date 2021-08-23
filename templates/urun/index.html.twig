@@ -1,0 +1,18 @@
+<table>
+    <tr>
+        <th>Id</th>
+        <th>?sim</th>
+        <th>Aç?klama</th>
+        <th>Fiyat</th>
+    </tr>
+    <body>
+        {% for urun in urunler %}
+            <tr>
+                <td>{{ urun.id }}</td>
+                <td>{{ urun.isim }}</td>
+                <td>{{ urun.aciklama }}</td>
+                <td>{{ urun.fiyat }}</td>
+            </tr>
+        {% endfor %}
+    </body>
+</table>
